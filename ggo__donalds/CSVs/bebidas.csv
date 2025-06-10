@@ -1,0 +1,30 @@
+id;nome;preco;caminho__img
+01;Coca-Cola 300ml;6.90;./imgs/bebidas/01.jpeg
+02;Coca-Cola 500ml;8.90;./imgs/bebidas/02.jpeg
+03;Coca-Cola 700ml;10.90;./imgs/bebidas/03.jpeg
+04;Coca-Cola Zero 300ml;6.90;./imgs/bebidas/04.jpeg
+05;Coca-Cola Zero 500ml;8.90;./imgs/bebidas/05.jpeg
+06;Coca-Cola Zero 700ml;10.90;./imgs/bebidas/06.jpeg
+07;Fanta Laranja 300ml;6.50;./imgs/bebidas/07.jpeg
+08;Fanta Laranja 500ml;8.50;./imgs/bebidas/08.jpeg
+09;Fanta Laranja 700ml;10.50;./imgs/bebidas/09.jpeg
+10;Fanta Guaraná 300ml;6.50;./imgs/bebidas/10.jpeg
+11;Fanta Guaraná 500ml;8.50;./imgs/bebidas/11.jpeg
+12;Fanta Guaraná 700ml;10.50;./imgs/bebidas/12.jpeg
+13;Del Valle Laranja 300ml;7.90;./imgs/bebidas/13.jpeg
+14;Del Valle Laranja 500ml;9.90;./imgs/bebidas/14.jpeg
+15;Del Valle Laranja 700ml;11.90;./imgs/bebidas/15.jpeg
+16;Del Valle Uva 300ml;7.90;./imgs/bebidas/16.jpeg
+17;Del Valle Uva 500ml;9.90;./imgs/bebidas/17.jpeg
+18;Del Valle Uva 700ml;11.90;./imgs/bebidas/18.jpeg
+19;Água Mineral;4.50;./imgs/bebidas/19.jpeg
+20;Del Valle 100% Uva (GGOsLanche Feliz);9.50;./imgs/bebidas/20.jpeg
+21;Café Premium 100ml;5.90;./imgs/bebidas/21.jpeg
+22;Café Premium 200ml;7.50;./imgs/bebidas/22.jpeg
+23;Café Premium 300ml;8.90;./imgs/bebidas/23.jpeg
+24;Café com Leite 200ml;6.90;./imgs/bebidas/24.jpeg
+25;Café com Leite 300ml;8.20;./imgs/bebidas/25.jpeg
+26;Capuccino 200ml;9.50;./imgs/bebidas/26.jpeg
+27;Capuccino 300ml;11.00;./imgs/bebidas/27.jpeg
+28;Chocolate Quente 200ml;8.50;./imgs/bebidas/28.jpeg
+29;Chocolate Quente 300ml;10.50;./imgs/bebidas/29.jpeg

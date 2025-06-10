@@ -1,0 +1,118 @@
+.cabecalho {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem 1em 1em;
+    background-color: var(--vermelho);
+    z-index: 100;
+    border-bottom:1px solid;
+}
+
+.cabecalho__menu {
+    position: relative;
+}
+
+.comidas.menu {
+    cursor: pointer;
+    transition: var(--transicao);
+    display: flex;
+    align-items: center;
+}
+
+.imgs__cabecacalho {
+    width: 3em;
+}
+
+.menu__opcoes {
+    width: 16em;
+    position: absolute;
+    top: 81%;
+    z-index: 1000;
+    background-color: var(--amarelo);
+    display: none;
+}
+
+
+.liks__menu {
+    color: var(--azul-escuro);
+    text-decoration: none;
+    display: block;
+    padding: 1em 1em;
+    font-size: 0.95rem;
+    font-family: var(--fon_secundaria);
+    border: .5px solid;
+}
+
+.liks__menu img {
+    width: 20px;
+    height: 20px;
+    /* Remove qualquer margem que possa estar desalinhando */
+    margin: 0;
+    vertical-align: middle;
+    /* Garante alinhamento vertical */
+}
+
+.cabecalho__nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.comidas {
+    border: 1px solid white;
+    background-color: var(--amarelo);
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.container__pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container__pesquisa>div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container__pesquisa {
+    position: relative;
+}
+
+#filto_de_alimentos {
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    outline: none;
+    width: 20em;
+    height: 2em;
+    padding: .5em;
+    font-size: 16px;
+}
+
+.button__pesquisa {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.user{
+    background-color: var(--amarelo_escuro);
+    padding: .5em;
+    border: 1px solid white;
+    border-radius: .5em;
+}
+.criar_entrar_conta{
+    background-color: white;
+    border: 1px solid;
+    border-radius: .5em;
+    font-family: var(--font_principal);
+    padding: .4em .3em .2em;
+    align-items: center;
+}
