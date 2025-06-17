@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD</title>
+  <link rel="stylesheet" href="./style/adm.css" />
+</head>
+
+<body>
+  <h1>GESTÃO DE USUÁRIOS E PRODUTOS</h1>
+
+  <div class="menu-toggle">
+    <label><input type="radio" name="painel" id="editar-usuarios" /> Editar Usuários</label>
+    <label><input type="radio" name="painel" id="editar-produtos" /> Editar Produtos</label>
+  </div>
+
+  <section class="crud-section" id="secao-usuarios">
+    <h2>Usuários</h2>
+
+    <div class="busca-id">
+      <input type="text" placeholder="Buscar usuário por ID" />
+      <button class="btn cinza">Procurar</button>
+    </div>
+
+    <form class="crud-form" id="form-usuario">
+      <input type="text" placeholder="Nome" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Senha" />
+      <select>
+        <option value="adm">Administrador</option>
+        <option value="cliente">Cliente</option>
+      </select>
+      <button type="submit" class="btn verde">Criar</button>
+    </form>
+
+    <table class="crud-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Tipo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Maria Oliveira</td>
+          <td>maria.oliveira@email.com</td>
+          <td>adm</td>
+          <td>
+            <button class="btn cinza">Editar</button>
+            <button class="btn vermelho">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="crud-section" id="secao-produtos">
+    <h2>Produtos</h2>
+
+    <div class="busca-id">
+      <input type="text" placeholder="Buscar produto por ID" />
+      <button class="btn cinza">Procurar</button>
+    </div>
+
+    <form class="crud-form" id="form-produto" enctype="multipart/form-data">
+      <input type="text" placeholder="Nome do Produto" />
+      <input type="text" placeholder="Preço" />
+      <input type="file" name="imagem" accept="image/*" required />
+      <select>
+        <option value="acompanhamentos">acompanhamentos</option>
+        <option value="bebidas">bebidas</option>
+        <option value="Hamburgues">Hamburgues</option>
+      </select>
+      <button type="submit" class="btn verde">Criar</button>
+      <button class="btn azul">Salvar</button>
+
+    </form>
+
+    <table class="crud-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>caminho__img</th>
+          <th>Categoria</th>
+          <th>Ações</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td>nome
+          <td>preco</td>
+          <td>caminho__img</td>
+          <td>categoria</td>
+          <td>
+
+            <button class="btn cinza">Editar</button>
+            <button class="btn vermelho">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="../js/adm.js"></script>
+</body>
+
+</html>

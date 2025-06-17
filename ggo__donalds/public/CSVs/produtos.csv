@@ -1,0 +1,60 @@
+id;nome;preco;caminho__img;categoria
+1;GGOsFritas Cheddar Bacon;15.90;./imgs/acompanhamentos/1.jpeg;acompanhamento
+2;GGOsFritas Grande;12.90;./imgs/acompanhamentos/2.jpeg;acompanhamento
+3;GGOsFritas Média;10.90;./imgs/acompanhamentos/3.jpeg;acompanhamento
+4;GGOsFritas Pequena;7.90;./imgs/acompanhamentos/4.jpeg;acompanhamento
+5;GGOsFritas Kids;5.90;./imgs/acompanhamentos/5.jpeg;acompanhamento
+6;Chicken GGOsNuggets 4 unidades;9.90;./imgs/acompanhamentos/6.jpeg;acompanhamento
+7;Chicken GGOsNuggets 10 unidades;22.90;./imgs/acompanhamentos/7.jpeg;acompanhamento
+8;Chicken GGOsNuggets 6 unidades;15.90;./imgs/acompanhamentos/8.jpeg;acompanhamento
+9;Ketchup;1.50;./imgs/acompanhamentos/9.jpeg;acompanhamento
+10;Mostarda;1.50;./imgs/acompanhamentos/10.jpeg;acompanhamento
+11;Chicken GGOsNuggets 15 unidades;29.90;./imgs/acompanhamentos/11.jpeg;acompanhamento
+12;Molho Barbecue;2.50;./imgs/acompanhamentos/12.jpeg;acompanhamento
+13;Molho Ranch;2.50;./imgs/acompanhamentos/13.jpeg;acompanhamento
+14;Coca-Cola 300ml;6.90;./imgs/bebidas/14.jpeg;bebida
+15;Coca-Cola 500ml;8.90;./imgs/bebidas/15.jpeg;bebida
+16;Coca-Cola 700ml;10.90;./imgs/bebidas/16.jpeg;bebida
+17;Coca-Cola Zero 300ml;6.90;./imgs/bebidas/17.jpeg;bebida
+18;Coca-Cola Zero 500ml;8.90;./imgs/bebidas/18.jpeg;bebida
+19;Coca-Cola Zero 700ml;10.90;./imgs/bebidas/19.jpeg;bebida
+20;Fanta Laranja 300ml;6.50;./imgs/bebidas/20.jpeg;bebida
+21;Fanta Laranja 500ml;8.50;./imgs/bebidas/21.jpeg;bebida
+22;Fanta Laranja 700ml;10.50;./imgs/bebidas/22.jpeg;bebida
+23;Fanta Guaraná 300ml;6.50;./imgs/bebidas/23.jpeg;bebida
+24;Fanta Guaraná 500ml;8.50;./imgs/bebidas/24.jpeg;bebida
+25;Fanta Guaraná 700ml;10.50;./imgs/bebidas/25.jpeg;bebida
+26;Del Valle Laranja 300ml;7.90;./imgs/bebidas/26.jpeg;bebida
+27;Del Valle Laranja 500ml;9.90;./imgs/bebidas/27.jpeg;bebida
+28;Del Valle Laranja 700ml;11.90;./imgs/bebidas/28.jpeg;bebida
+29;Del Valle Uva 300ml;7.90;./imgs/bebidas/29.jpeg;bebida
+30;Del Valle Uva 500ml;9.90;./imgs/bebidas/30.jpeg;bebida
+31;Del Valle Uva 700ml;11.90;./imgs/bebidas/31.jpeg;bebida
+32;Água Mineral;4.50;./imgs/bebidas/32.jpeg;bebida
+33;Del Valle 100% Uva (GGOsLanche Feliz);9.50;./imgs/bebidas/33.jpeg;bebida
+34;Café Premium 100ml;5.90;./imgs/bebidas/34.jpeg;bebida
+35;Café Premium 200ml;7.50;./imgs/bebidas/35.jpeg;bebida
+36;Café Premium 300ml;8.90;./imgs/bebidas/36.jpeg;bebida
+37;Café com Leite 200ml;6.90;./imgs/bebidas/37.jpeg;bebida
+38;Café com Leite 300ml;8.20;./imgs/bebidas/38.jpeg;bebida
+39;Capuccino 200ml;9.50;./imgs/bebidas/39.jpeg;bebida
+40;Capuccino 300ml;11.00;./imgs/bebidas/40.jpeg;bebida
+41;Chocolate Quente 200ml;8.50;./imgs/bebidas/41.jpeg;bebida
+42;Chocolate Quente 300ml;10.50;./imgs/bebidas/42.jpeg;bebida
+43;Super Cheddar GGOsMelt Bacon;35.90;./imgs/Hamburgues/43.jpeg;hamburguer
+44;Big GGOs;32.50;./imgs/Hamburgues/44.jpeg;hamburguer
+45;Big GGOs;32.50;./imgs/Hamburgues/45.jpeg;hamburguer
+46;Duplo Quarterão;34.90;./imgs/Hamburgues/46.jpeg;hamburguer
+47;Duplo Quarterão;34.90;./imgs/Hamburgues/47.jpeg;hamburguer
+48;Quarterão com Queijo;28.75;./imgs/Hamburgues/48.jpeg;hamburguer
+49;Quarterão com Queijo;28.75;./imgs/Hamburgues/49.jpeg;hamburguer
+50;GGOsNífico Bacon;31.20;./imgs/Hamburgues/50.jpeg;hamburguer
+51;GGOsNífico Bacon;31.20;./imgs/Hamburgues/51.jpeg;hamburguer
+52;Duplo Cheddar GGOsMelt;33.80;./imgs/Hamburgues/52.jpeg;hamburguer
+53;Duplo Cheddar GGOsMelt;33.80;./imgs/Hamburgues/53.jpeg;hamburguer
+54;Cheddar GGOsMelt;27.60;./imgs/Hamburgues/54.jpeg;hamburguer
+55;Cheddar GGOsMelt;27.60;./imgs/Hamburgues/55.jpeg;hamburguer
+56;Duplo Burger Bacon;37.90;./imgs/Hamburgues/56.jpeg;hamburguer
+57;Duplo Burger Bacon;37.90;./imgs/Hamburgues/57.jpeg;hamburguer
+58;Duplo Burger com Queijo;36.50;./imgs/Hamburgues/58.jpeg;hamburguer
+59;Duplo Burger com Queijo;36.50;./imgs/Hamburgues/59.jpeg;hamburguer

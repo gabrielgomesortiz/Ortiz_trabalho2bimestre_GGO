@@ -1,0 +1,27 @@
+/ggodonals/
+│
+├── public/                      # Sua pasta atual
+│   ├── assets/                  # (Já existe)
+│   ├── csv/
+│   │   └── users.csv            # Adicionei: Arquivo de usuários
+│   ├── html/
+│   │   ├── login.html           # Novo: Página de login
+│   │   └── ...                  # Seus outros HTMLs
+│   ├── html_menu/               # (Já existe)
+│   ├── imgs/                    # (Já existe)
+│   │   └── logo-login.png       # Adicionei: Imagem para o login
+│   ├── js/
+│   │   ├── auth.js              # Novo: Lógica de autenticação
+│   │   └── ...                  # Seus outros JS
+│   ├── style/
+│   │   ├── login.css            # Novo: Estilos do login
+│   │   └── ...                  # Seus outros CSS
+│   │
+│   ├── index.html               # (Já existe) - Redirecionará para login
+│   ├── main.js                  # (Já existe)
+│   ├── reset.css                # (Já existe)
+│   └── style.css                # (Já existe)
+│
+└── server/                      # Seu servidor já existente
+    ├── ...                      # Suas configurações atuais
+    └── server.js                # Adicionar rotas de autenticação

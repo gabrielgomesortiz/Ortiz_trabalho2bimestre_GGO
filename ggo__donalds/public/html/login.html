@@ -1,0 +1,51 @@
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGodonals - Entrar</title>
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="brand-header">
+                <img src="../imgs/fe8a27de-ba2a-4aa2-afb9-91d052022f42-removebg-preview.png" alt="GGodonals"
+                    class="logo">
+                <h1>GGodonals</h1>
+                <p class="slogan">O sabor que conquista!</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <span class="btn-text">Entrar</span>
+                </button>
+            </form>
+
+            <div id="errorMessage" class="error-message"></div>
+
+            <div class="footer-links">
+                <a href="./sinup.html">Cadastrar novo usuário</a>
+                <span>•</span>
+                <a href="#">Esqueci minha senha</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>

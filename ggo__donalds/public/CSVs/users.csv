@@ -1,0 +1,6 @@
+id;nome;email;senha;tipo
+1;Maria Oliveira;maria.oliveira@email.com;M@ria456;adm
+2;João Silva;joao.silva@email.com;Senha123!;adm
+3;Carlos Souza;carlos.souza@email.com;C@rlos789;cliente
+4;Ana Pereira;ana.pereira@email.com;An@2024;cliente
+5;Pedro Costa;pedro.costa@email.com;P3dr0!Costa;cliente
