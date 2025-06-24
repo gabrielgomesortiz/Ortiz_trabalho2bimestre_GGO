@@ -127,7 +127,8 @@ async function carregarCSV(nomeArquivo) {
     const data = await response.text();
     processarCSV(data);
     return true;
-  } catch (error) {
+  }
+  catch (error) {
     console.error(`Erro ao carregar ${nomeArquivo}:`, error);
     throw error;
   }
@@ -257,7 +258,67 @@ function temPedidos() {
   return Object.values(pedidos).some(categoria => Object.keys(categoria).length > 0);
 }
 
+// Funções para Modal - Adicionado aqui para garantir que existe
+function mostrarModal(mensagem) {
+    const modalContainer = document.createElement('div');
+    modalContainer.className = 'simple-modal-overlay';
+    modalContainer.innerHTML = `
+            <div class="simple-modal-content">
+                <p>${mensagem}</p>
+                <button onclick="document.querySelector('.simple-modal-overlay').remove()">OK</button>
+            </div>
+        `;
+    document.body.appendChild(modalContainer);
+
+    // Estilos básicos para o modal (você pode transferir para um CSS, se quiser)
+    const style = document.createElement('style');
+    style.textContent = `
+            .simple-modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+            .simple-modal-content {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                max-width: 300px;
+            }
+            .simple-modal-content button {
+                margin-top: 15px;
+                padding: 8px 15px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .simple-modal-content button:hover {
+                background-color: #0056b3;
+            }
+        `;
+    document.head.appendChild(style);
+}
+
 function gerarJSONPedido() {
+  // NOVO: Verifica se o usuário está logado antes de finalizar o pedido
+  const usuarioStr = getCookie("usuario");
+  if (!usuarioStr) {
+    mostrarModal("Você precisa estar logado para finalizar seu pedido!");
+    // Opcional: Redirecionar para a página de login
+    // window.location.href = 'http://localhost:3001/html/login.html';
+    return false; // Impede a continuação do processo
+  }
+
   if (!temPedidos()) {
     mostrarModal("Por favor, adicione itens ao seu pedido antes de finalizar!");
     return false;
@@ -303,7 +364,7 @@ function gerarJSONPedido() {
   return true;
 }
 
-// ========== PROCESSAMENTO DE CSV (MUDANÇA PRINCIPAL AQUI) ==========
+// ========== PROCESSAMENTO DE CSV ==========
 function processarCSV(csvData) {
   const linhas = csvData.trim().split("\n");
   if (linhas.length < 2) {
@@ -330,7 +391,8 @@ function processarCSV(csvData) {
 
     const valores = linhas[i].split(";").map(v => v.trim());
     const id = valores[indiceId];
-    const nome = valores[indiceNome];
+    // CORRIGIDO: Era 'indiceIndiceNome', agora é 'indiceNome'
+    const nome = valores[indiceNome]; 
     const preco = parseFloat(valores[indicePreco].replace(',', '.'));
     const caminho__img = valores[indiceImagem];
     const categoriaCSV = valores[indiceCategoria]; // Categoria exata do CSV
@@ -416,4 +478,65 @@ function mostrarErroCarregamento() {
   if (cardapioContainer) {
     cardapioContainer.innerHTML = '<p class="sem-itens" style="color: red;">Erro ao carregar o cardápio. Por favor, tente novamente mais tarde.</p>';
   }
+}
+
+// Função auxiliar para ler cookies
+function getCookie(nome) {
+  const valor = `; ${document.cookie}`;
+  const partes = valor.split(`; ${nome}=`);
+  if (partes.length === 2) return partes.pop().split(';').shift();
+  return null; // Retorna null se o cookie não for encontrado
+}
+
+// ========== LÓGICA DE EXIBIÇÃO DE INFORMAÇÕES DO USUÁRIO LOGADO (MODIFICADO) ==========
+window.onload = () => {
+  const usuarioStr = getCookie("usuario");
+  const userDiv = document.querySelector(".user"); // Referência ao div.user existente
+
+  if (userDiv) { // Verifica se o elemento .user existe no HTML
+    if (usuarioStr) {
+      try {
+        const usuario = JSON.parse(decodeURIComponent(usuarioStr));
+        // Se o usuário estiver logado, substitui o conteúdo do div.user
+        userDiv.innerHTML = `
+          <div style="
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            background-color: #f0f0f0; /* Um fundo suave para o status */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+          ">
+            <span style="font-size: 1.2em;">${usuario.icone || '👤'} <br> </span>
+            <span style="font-weight: bold; color: #333;"> ${usuario.nome}</span>
+          </div>
+        `;
+        console.log('Dados do usuário logado carregados do cookie:', usuario);
+
+      } catch (e) {
+        console.error("Erro ao ler ou parsear o cookie do usuário:", e);
+        // Em caso de erro com o cookie, restaura os botões de login
+        renderLoginButtons(userDiv);
+      }
+    } else {
+      // Se não houver cookie, garante que os botões de login/cadastro estejam visíveis
+      renderLoginButtons(userDiv);
+      console.log('Nenhum cookie de usuário encontrado. O usuário não está logado.');
+    }
+  } else {
+    console.warn('Elemento com classe "user" não encontrado no DOM. O status do usuário não será exibido.');
+  }
+};
+
+// Função auxiliar para renderizar os botões de login/cadastro
+function renderLoginButtons(containerElement) {
+  containerElement.innerHTML = `
+    <button class="criar_entrar_conta" onclick="window.location.href='http://localhost:3001/html/sinup.html'">
+      Criar Conta
+    </button>
+    <button class="criar_entrar_conta" onclick="window.location.href='http://localhost:3001/html/login.html'">
+      Entrar
+    </button>
+  `;
 }

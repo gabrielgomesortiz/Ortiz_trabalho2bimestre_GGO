@@ -26,12 +26,14 @@
     <form class="crud-form" id="form-usuario">
       <input type="text" placeholder="Nome" />
       <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Senha" />
+      <input type="text" placeholder="Senha" />
       <select>
-        <option value="adm">Administrador</option>
+        <option value="adm">adm</option>
         <option value="cliente">Cliente</option>
       </select>
-      <button type="submit" class="btn verde">Criar</button>
+      <button type="submit" class="btn verde">Criar</button> 
+      <button class="btn azul" onclick="salvarTudo()">Salvar</button>
+
     </form>
 
     <table class="crud-table">
@@ -40,6 +42,7 @@
           <th>ID</th>
           <th>Nome</th>
           <th>Email</th>
+          <th>Senha</th>
           <th>Tipo</th>
           <th>Ações</th>
         </tr>
@@ -69,7 +72,7 @@
 
     <form class="crud-form" id="form-produto" enctype="multipart/form-data">
       <input type="text" placeholder="Nome do Produto" />
-      <input type="text" placeholder="Preço" />
+      <input type="number" placeholder="Preço" />
       <input type="file" name="imagem" accept="image/*" required />
       <select>
         <option value="acompanhamentos">acompanhamentos</option>
@@ -77,7 +80,7 @@
         <option value="Hamburgues">Hamburgues</option>
       </select>
       <button type="submit" class="btn verde">Criar</button>
-      <button class="btn azul">Salvar</button>
+      <button class="btn azul" onclick="salvarTudo()">Salvar</button>
 
     </form>
 

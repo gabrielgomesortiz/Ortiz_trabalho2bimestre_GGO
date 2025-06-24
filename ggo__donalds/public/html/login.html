@@ -1,20 +1,16 @@
-</html>
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GGodonals - Entrar</title>
     <link rel="stylesheet" href="./style/login.css">
 </head>
-
 <body>
     <div class="login-wrapper">
         <div class="login-container">
             <div class="brand-header">
-                <img src="../imgs/fe8a27de-ba2a-4aa2-afb9-91d052022f42-removebg-preview.png" alt="GGodonals"
-                    class="logo">
+                <img src="../assets/logo.png" alt="GGodonals" class="logo">
                 <h1>GGodonals</h1>
                 <p class="slogan">O sabor que conquista!</p>
             </div>
@@ -24,10 +20,19 @@
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" placeholder="seu@email.com" required>
                 </div>
-
                 <div class="input-group">
                     <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" data-target="password" aria-label="Mostrar senha">
+                            <svg class="icon-eye" xmlns="http://www.w3.org/2000/svg" height="24" width="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <button type="submit" class="login-btn">
@@ -38,14 +43,11 @@
             <div id="errorMessage" class="error-message"></div>
 
             <div class="footer-links">
-                <a href="./sinup.html">Cadastrar novo usuário</a>
-                <span>•</span>
-                <a href="#">Esqueci minha senha</a>
+                <a href="http://localhost:3001/html/sinup.html">Cadastrar novo usuário</a>
             </div>
         </div>
     </div>
 
     <script src="../js/auth.js"></script>
 </body>
-
 </html>
