@@ -117,3 +117,11 @@ h1 {
   cursor: pointer;
 }
 
+.voltar-btn {
+  background-color: #28a745; /* verde */
+  color: white;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}

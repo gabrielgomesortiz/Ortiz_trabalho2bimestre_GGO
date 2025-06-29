@@ -6,7 +6,7 @@
     padding: .5rem 1rem 1em 1em;
     background-color: var(--vermelho);
     z-index: 100;
-    border-bottom:1px solid;
+    border-bottom: 1px solid;
 }
 
 .cabecalho__menu {
@@ -31,6 +31,17 @@
     z-index: 1000;
     background-color: var(--amarelo);
     display: none;
+}
+
+.menu__opcoes {
+    display: none;
+    position: absolute;
+    background-color: var(--amarelo);
+    z-index: 999;
+}
+
+.menu__opcoes.menu-ativo {
+    display: block;
 }
 
 
@@ -102,17 +113,159 @@
 }
 
 
-.user{
+.user {
     background-color: var(--amarelo_escuro);
     padding: .5em;
     border: 1px solid white;
     border-radius: .5em;
 }
-.criar_entrar_conta{
+
+.criar_entrar_conta {
     background-color: white;
     border: 1px solid;
     border-radius: .5em;
     font-family: var(--font_principal);
     padding: .4em .3em .2em;
     align-items: center;
+}
+
+/* Estilos para o contêiner principal do dropdown do usuário */
+.usuario-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Estilos para o avatar (ícone do usuário) */
+.usuario-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.usuario-avatar:hover {
+    background-color: #e0e0e0;
+}
+
+.usuario-avatar img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    filter: invert(20%);
+}
+
+/* Estilos para o menu dropdown que aparece ao clicar */
+.usuario-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    z-index: 100;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    transform-origin: top right;
+    animation: fadeInScale 0.2s ease-out;
+}
+
+/* Estilo para o nome do usuário dentro do menu */
+.usuario-menu .usuario-nome-menu {
+    font-weight: bold;
+    color: #333;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilos para os botões dentro do menu dropdown */
+.usuario-menu .dropdown-btn {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #555;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.usuario-menu .dropdown-btn:hover {
+    background-color: #f5f5f5;
+    color: #007bff;
+}
+
+.usuario-menu .dropdown-btn:active {
+    background-color: #e0e0e0;
+}
+
+/* NOVO: Estilos para o botão de administrador */
+.usuario-menu .admin-btn {
+    background-color: #28a745;
+    /* Cor verde para admin */
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    /* Espaçamento acima do botão */
+    margin-bottom: 5px;
+    /* Espaçamento abaixo do botão */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.usuario-menu .admin-btn:hover {
+    background-color: #218838;
+    /* Verde mais escuro no hover */
+    color: white;
+    /* Garante que o texto continue branco */
+}
+
+.usuario-menu .admin-btn:active {
+    background-color: #1e7e34;
+}
+
+/* Animação de entrada (opcional) */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.admin-btn {
+    background-color: #28a745;
+    /* verde */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    user-select: none;
 }
